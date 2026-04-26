@@ -601,15 +601,15 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
         <div class="o-sum-price" id="of-price"></div>
       </div>
       <div id="f-sewa">
-        <div class="fsec">Data Sewa Bot</div>
-        <div class="fg"><label class="fl">Nama Grup</label><input class="fi" id="sb-grup" placeholder="Contoh: Grup Gaming Squad" type="text"></div>
-        <div class="fg"><label class="fl">Link Grup WhatsApp</label><input class="fi" id="sb-link" placeholder="https://chat.whatsapp.com/..." type="url"></div>
+        <div class="fsec">Data Script</div>
+        <div class="fg"><label class="fl">Upload SC</label><input class="fi" id="sb-grup" placeholder="Link/nama file SC kamu" type="text"></div>
+        <div class="fg"><label class="fl">Pilihan</label><select class="fi" id="sb-link"><option value="Rename SC">Rename SC</option><option value="Fix Fitur">Fix Fitur</option><option value="All">All</option></select></div>
         <div class="fg"><label class="fl">Nomor WA Kamu</label><input class="fi" id="sb-wa" placeholder="628xxxxxxxxxx" type="tel"></div>
       </div>
       <div id="f-panel" style="display:none">
-        <div class="fsec">Data Panel</div>
-        <div class="fg"><label class="fl">Nama Panel</label><input class="fi" id="p-nama" placeholder="Contoh: BotKu Panel" type="text"></div>
-        <div class="fg"><label class="fl">Password Panel</label><input class="fi" id="p-pass" placeholder="Buat password yang kuat" type="text"></div>
+        <div class="fsec">Data Bot</div>
+        <div class="fg"><label class="fl">Nomor Bot</label><input class="fi" id="p-nama" placeholder="Contoh: 628xxxxxxxxxx" type="tel"></div>
+        <div class="fg"><label class="fl">Nomor Owner</label><input class="fi" id="p-pass" placeholder="628xxxxxxxxxx" type="tel"></div>
       </div>
       <div id="f-script" style="display:none">
         <div class="alert-box">⚠️ Isi di tengah tanda <code>"..."</code> atau <code>'...'</code></div>
@@ -1287,7 +1287,7 @@ function goToPayment(){
     const link=document.getElementById('sb-link').value.trim();
     const wa=document.getElementById('sb-wa').value.trim();
     if(!grup||!link||!wa){showToast('⚠️ Lengkapi semua data!');return;}
-    msg=`🤖 *ORDER SEWA BOT SABA ASSISTANT*\n━━━━━━━━━━━━━━━━━━\n📦 Produk  : Sewa Bot\n⏱️ Durasi  : ${v.name}\n💰 Harga   : ${v.price}\n\n📋 *DATA PEMBELIAN:*\nNama grup : ${grup}\nLink grup : ${link}\nNomer wa  : ${wa}\n\n🔗 Link grup buyer :\n${GRUP_BUYER}\n━━━━━━━━━━━━━━━━━━\n🛒 _Order via PutraXCipi_`;
+    msg=`🤖 *ORDER SEWA BOT ALYA AI*\n━━━━━━━━━━━━━━━━━━\n📦 Produk  : Sewa Bot\n⏱️ Durasi  : ${v.name}\n💰 Harga   : ${v.price}\n\n📋 *DATA PEMBELIAN:*\nNama grup : ${grup}\nLink grup : ${link}\nNomer wa  : ${wa}\n\n🔗 Link grup buyer :\n${GRUP_BUYER}\n━━━━━━━━━━━━━━━━━━\n🛒 _Order via PutraXCipi_`;
   }else if(p.id==='jadibot'){
     const nama=document.getElementById('p-nama').value.trim();
     const pass=document.getElementById('p-pass').value.trim();
